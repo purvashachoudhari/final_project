@@ -1,0 +1,151 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #0000ff;
+    --pink: #ff007f;
+    --yellow: #ffff00;
+    --bg-color: #f0f0f0;
+    --border-thick: 4px solid #000000;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Arial Black', sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+/* --- Page 1: Bento Layout --- */
+.bento-grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "intro intro photo"
+        "spotify featured featured"
+        "social social social";
+}
+
+.box {
+    background: var(--white);
+    border: var(--border-thick);
+    padding: 25px;
+    box-shadow: 10px 10px 0px var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-box { grid-area: intro; background: var(--blue); color: white; }
+.photo-box { grid-area: photo; padding: 0; overflow: hidden; }
+.spotify-box { grid-area: spotify; padding: 10px; min-height: 400px; }
+.featured-box { grid-area: featured; background: var(--pink); }
+.social-box { grid-area: social; flex-direction: row; justify-content: space-around; }
+
+.box img { width: 100%; height: 100%; object-fit: cover; }
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0px var(--black);
+    width: fit-content;
+}
+
+/* --- Page 2: Accordion & Sticker Layout --- */
+.accordion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+details {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: 10px 10px 0px var(--black);
+    margin-bottom: 30px;
+}
+
+summary {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    background: var(--yellow);
+    border-bottom: var(--border-thick);
+    text-transform: uppercase;
+    list-style: none; /* Removes the default arrow */
+}
+
+/* Sticker Grid Inside Accordion */
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 30px;
+}
+
+.sticker-item {
+    background: var(--white);
+    border: var(--border-thick);
+    padding: 20px;
+    box-shadow: 8px 8px 0px var(--blue); /* Your blue shadow styling */
+    text-align: center;
+}
+
+.sticker-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    visibility: hidden; /* HIDDEN state */
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: var(--border-thick);
+    font-family: inherit;
+    font-weight: 900;
+    outline: none;
+}
+
+input:focus { background-color: var(--yellow); }
+
+.back-arrow {
+    display: inline-block;
+    border: var(--border-thick);
+    padding: 10px 20px;
+    background: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    box-shadow: 5px 5px 0px var(--black);
+    margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sticker-grid { grid-template-columns: repeat(2, 1fr); }
+    .bento-grid {
+        grid-template-areas: "intro intro" "photo photo" "spotify featured" "social social";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .sticker-grid { grid-template-columns: 1fr; }
+    .bento-grid {
+        grid-template-areas: "intro" "photo" "spotify" "featured" "social";
+        grid-template-columns: 1fr;
+    }
+}

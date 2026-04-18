@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker Game | Guess the Animal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="sticker-header">
+        <a href="index.html" class="back-arrow" aria-label="Go back to home page">←</a>
+        <h1>My Favorite Stickers</h1>
+    </header>
+
+    <main class="accordion-container">
+        <details open>
+            <summary>Row 1: Farm & Home</summary>
+            <div class="sticker-grid">
+                <div class="sticker-item">
+                    <img src="images/bunny.png" alt="Bunny Sticker" class="sticker-img">
+                    <p class="hint">Hint: Long ears and hops around</p>
+                    <input type="text" data-answer="bunny" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/cat.png" alt="Cat Sticker" class="sticker-img">
+                    <p class="hint">Hint: Meows and loves naps</p>
+                    <input type="text" data-answer="cat" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/cow.png" alt="Cow Sticker" class="sticker-img">
+                    <p class="hint">Hint: Says 'moo' and gives milk</p>
+                    <input type="text" data-answer="cow" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/dog.png" alt="Dog Sticker" class="sticker-img">
+                    <p class="hint">Hint: Man's best friend</p>
+                    <input type="text" data-answer="dog" placeholder="Guess...">
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>Row 2: Wild Friends</summary>
+            <div class="sticker-grid">
+                <div class="sticker-item">
+                    <img src="images/duck.png" alt="Duck Sticker" class="sticker-img">
+                    <p class="hint">Hint: Waddles and says 'quack'</p>
+                    <input type="text" data-answer="duck" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/goat.png" alt="Goat Sticker" class="sticker-img">
+                    <p class="hint">Hint: Climbs rocks and has horns</p>
+                    <input type="text" data-answer="goat" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/Hamster.png" alt="Hamster Sticker" class="sticker-img">
+                    <p class="hint">Hint: Small pet with puffy cheeks</p>
+                    <input type="text" data-answer="hamster" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/Monkey.png" alt="Monkey Sticker" class="sticker-img">
+                    <p class="hint">Hint: Swings from trees and loves bananas</p>
+                    <input type="text" data-answer="monkey" placeholder="Guess...">
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>Row 3: Cool & Cold</summary>
+            <div class="sticker-grid">
+                <div class="sticker-item">
+                    <img src="images/panda.png" alt="Panda Sticker" class="sticker-img">
+                    <p class="hint">Hint: Black and white bear from China</p>
+                    <input type="text" data-answer="panda" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/Penguine.png" alt="Penguin Sticker" class="sticker-img">
+                    <p class="hint">Hint: Flightless bird that loves ice</p>
+                    <input type="text" data-answer="penguin" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/Tiger.png" alt="Tiger Sticker" class="sticker-img">
+                    <p class="hint">Hint: Big cat with orange and black stripes</p>
+                    <input type="text" data-answer="tiger" placeholder="Guess...">
+                </div>
+                <div class="sticker-item">
+                    <img src="images/whale.png" alt="Whale Sticker" class="sticker-img">
+                    <p class="hint">Hint: Giant mammal of the deep ocean</p>
+                    <input type="text" data-answer="whale" placeholder="Guess...">
+                </div>
+            </div>
+        </details>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
