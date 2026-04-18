@@ -43,7 +43,7 @@ body {
 .intro-box { grid-area: intro; background: var(--blue); color: white; }
 .photo-box { grid-area: photo; padding: 0; overflow: hidden; }
 .spotify-box { grid-area: spotify; padding: 10px; min-height: 400px; }
-.featured-box { grid-area: featured; background: var(--pink); }
+.featured-box { grid-area: featured; background: var(--pink); color: white;}
 .social-box { grid-area: social; flex-direction: row; justify-content: space-around; }
 
 .box img { width: 100%; height: 100%; object-fit: cover; }
